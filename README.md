@@ -27,3 +27,5 @@ TextAnimation("Text", 50, 10, 100)
 
 Output:
 It prints the paragraph "Text" to the screen by typing one character every 50 milliseconds, making an error with a 10% probability, and then deleting and correcting this error at a speed of 100 milliseconds.
+
+This library requires C++11 or later (due to the use of threads and chrono).
