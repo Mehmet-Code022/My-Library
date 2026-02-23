@@ -1,5 +1,5 @@
 # My-Library
-A library projects
+A library project
 
 This library is a tool designed to make basic functions easier to perform. It is planned to receive regular updates.
 
