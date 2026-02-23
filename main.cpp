@@ -72,15 +72,21 @@ void TextAnimation(string Text, float speed_ms, int error_rate, int remove_speed
 
 void ShowProgressBar(int len_of_bar, int WaitTime) {
     cout << YELLOW;
-    cout << "[" << flush; 
-    for (int i = 0; i < len_of_bar; i++) {
-        cout << "#" << flush;
+    for (int i = 0; i <= len_of_bar; i++) {
+        int percentage = (i * 100) / len_of_bar;
+        
+        cout << "\r[" << flush; 
+        
+        for (int j = 0; j < i; j++) cout << "#";      
+        for (int j = 0; j < len_of_bar - i; j++) cout << "."; 
+        
+        cout << "] %" << percentage << flush;
+
         this_thread::sleep_for(chrono::milliseconds(WaitTime));
     }
-    cout << "] Yukleme Tamamlandi!" << endl;
+    cout << " - Yukleme Tamamlandi!" << endl;
     cout << RESET;
 }
-
 void AutoScript(string text, int AutoSpeed,int text_speed, int error_possibility){
     int len_of_text = text.length();
     int a = len_of_text / 2;
