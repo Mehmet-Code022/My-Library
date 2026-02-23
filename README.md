@@ -29,3 +29,15 @@ Output:
 It prints the paragraph "Text" to the screen by typing one character every 50 milliseconds, making an error with a 10% probability, and then deleting and correcting this error at a speed of 100 milliseconds.
 
 This library requires C++11 or later (due to the use of threads and chrono).
+
+!AutoScript is the most advanced and user-friendly function in the library. It automatically generates a progress bar based on the input text and then displays the text with a typewriter effect. It streamlines the entire process.
+
+Parameters:
+
+    text: The main string to be displayed on the screen.
+
+    AutoSpeed: The fill speed of the progress bar (in milliseconds).
+
+    text_speed: The delay between characters while typing the text.
+
+    error_possibility: The probability of making a typo (between 0 and 100).
